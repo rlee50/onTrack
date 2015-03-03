@@ -1,0 +1,122 @@
+h2 {
+	color:#777;
+	margin-top:0px;
+}
+.hide {
+	display:none;
+}
+.button {
+	display:block;
+	margin:10px auto;
+	width:100px;
+	padding:10px 10px;
+}
+.flexable {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: nowrap;
+}
+
+#addTask {
+	-moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
+	-webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+	background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
+	background-color:#2dabf9;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+#addTask:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+	background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
+	background-color:#0688fa;
+}
+
+#addTask:active {
+	showTaskPopup();
+}
+/********** The container that holds the alarm section *********/
+#taskContainer {
+	width:80%;
+	margin:0px auto;
+	background:#ecf0f1;
+	color:#777;
+	padding:13%;
+}
+#taskHeader {
+	position:relative;
+	border-bottom:1px solid #ccc;
+}
+#taskHeader h2 {
+	justify-content:flex-end;
+}
+#taskHeader input {
+	position:absolute;
+	right:0px;
+	margin:5px;
+}
+#tasks {
+	margin-top:20px;
+}
+/********** The black transparent mask when adding an alarm clock *********/
+#mask {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.7);
+	top:0;
+	left:0;
+}
+/********** The white popup container when adding an alarm clock *********/
+#popup {
+	position:absolute;
+	top:45%;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	width:250px;
+	z-index:1;
+	background-color:white;
+	border:1px solid #ccc;
+	border-radius:5px;
+	padding:20px;
+}
+#popup h2 {
+	width:100%;
+	text-align:left;
+	border-bottom:1px solid #ccc;
+}
+#popup .button {
+	margin:10px auto 10px auto;
+}
+#popup #taskName {
+	width:90%;
+	font-size:14px;
+	margin:10px auto 25px auto;
+}
